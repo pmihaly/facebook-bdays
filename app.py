@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST"])
 def main_route():
-    email = request.get_json()["email"]
-    password = request.get_json()["pass"]
-    return Response(get_birthdays(email, password), mimetype="text/ics", headers={"Content-disposition":
-                                                                                  "attachment; filename=birthdays.ics"})
+
+    return Response(
+        get_birthdays(request.get_json()["email"], request.get_json()["pass"]),
+        mimetype="text/ics",
+        headers={"Content-disposition": "attachment; filename=birthdays.ics"})
