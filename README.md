@@ -1,2 +1,3 @@
 # facebook-bdays
-Facebook ismerőslista exportálása
+
+Facebook ismerősök születésnapjainak exportálása
