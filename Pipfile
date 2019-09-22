@@ -18,6 +18,7 @@ python-dateutil = "*"
 MechanicalSoup = "*"
 Babel = "*"
 flask = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
