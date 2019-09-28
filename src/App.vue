@@ -1,36 +1,33 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+  <div>
+    <v-app-bar color="deep-purple accent-4" dark>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Facebook Bdays</v-toolbar-title>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+    <v-card max-width="500" class="mx-auto middle">
+      <v-card-title>Facebook Login</v-card-title>
+      <v-card-text>
+        <v-text-field label="Email/Phone"></v-text-field>
+        <v-text-field label="Password" type="password"></v-text-field>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn text>Log In</v-btn>
+      </v-card-actions>
+    </v-card>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
-};
+export default {};
 </script>
+
+<style scoped>
+.middle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>

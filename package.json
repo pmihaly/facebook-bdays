@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "dev-server": "export FLASK_APP=app;export FLASK_ENVIRONMENT=development;flask run",
+    "dev": "concurrently 'npm run dev-server' 'npm run serve'"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
+    "concurrently": "^4.1.2",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-plugin-import": "^2.18.2",
