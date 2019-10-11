@@ -32,6 +32,13 @@ export default {
   methods: {
     async getCalendar(email, pass) {
       const res = await axios.post('http://localhost:5000', { email, pass });
+
+      const url = window.URL.createObjectURL(new Blob([res.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'calendar.ics');
+      document.body.appendChild(link);
+      link.click();
     }
   }
 };
