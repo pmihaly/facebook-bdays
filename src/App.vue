@@ -9,18 +9,32 @@
     <v-card max-width="500" class="mx-auto middle">
       <v-card-title>Facebook Login</v-card-title>
       <v-card-text>
-        <v-text-field label="Email/Phone"></v-text-field>
-        <v-text-field label="Password" type="password"></v-text-field>
+        <v-text-field label="Email/Phone" v-model="email"></v-text-field>
+        <v-text-field label="Password" type="password" v-model="pass"></v-text-field>
       </v-card-text>
       <v-card-actions>
-        <v-btn text>Log In</v-btn>
+        <v-btn text @click="getCalendar(email, pass)">Log In</v-btn>
       </v-card-actions>
     </v-card>
   </div>
 </template>
 
 <script>
-export default {};
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      email: '',
+      pass: ''
+    };
+  },
+  methods: {
+    async getCalendar(email, pass) {
+      const res = await axios.post('http://localhost:5000', { email, pass });
+    }
+  }
+};
 </script>
 
 <style scoped>
