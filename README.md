@@ -10,6 +10,7 @@
   - [Szükséges programok](#szükséges-programok)
   - [Telepítés](#Telepítés)
   - [Production build](#production-build)
+- [Problémák](#problémák)
 - [Licensz](#licensz)
 - [Kapcsolat](#Kapcsolat)
 
@@ -86,6 +87,13 @@ yarn build
 ```
 
 2. [Production szerver előállítása](https://flask.palletsprojects.com/en/1.1.x/tutorial/deploy/)
+
+<!-- Problémák -->
+
+## Problémák
+
+- Facebook megerősítő emailt küld egy szokatlan IP-című belépésnél és nem enged bejelentkezni
+  - Megoldás: meg kell erősíteni az emailben, hogy mi léptünk be, majd újra meg kell kísérelni a belépést
 
 <!-- Licensz -->
 
