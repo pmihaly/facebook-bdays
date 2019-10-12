@@ -1,8 +1,8 @@
 # Facebook BDays
 
-<!-- TABLE OF CONTENTS -->
+<!-- Tartalomjegyzék -->
 
-## Table of Contents
+## Tartalomjegyzék
 
 - [Projektről](#about-the-project)
   - [Használt eszközök](#built-with)
